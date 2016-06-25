@@ -24,3 +24,6 @@ which means there is
 no additional cost at run-time
 
 and keep in your mind that Andbrain doesn’t slow down your App, it gives the same result as when you declare your views manually
+
+DOWNLOAD ANDBRAIN V1.0.5 NOW 
+http://www.andbrain.com/product/andbrain-engine/
