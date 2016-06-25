@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+  compileSdkVersion 22
+  buildToolsVersion rootProject.ext.buildToolsVersion
+  compileOptions {
+    sourceCompatibility rootProject.ext.sourceCompatibilityVersion
+    targetCompatibility rootProject.ext.targetCompatibilityVersion
+  }
+  defaultConfig {
+    applicationId 'com.andbrain.demo'
+    minSdkVersion 16
+    targetSdkVersion 22
+    versionCode 1
+    versionName '1.0.0'
+  }
+  buildTypes {
+    debug {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  productFlavors {
+  }
+  apt {
+    arguments {
+
+      resPath variant.outputs.processResources.resDir.get(0)
+    }
+  }
+}
+
+dependencies {
+  compile project(':andbrain-annotations')
+
+   apt project(':andbrain-compiler')
+
+   //testCompile deps.junit testCompile deps.truth testCompile deps.robolectric compile 'com.ximpleware:vtd-xml:2.11'
+}

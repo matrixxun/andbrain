@@ -1,0 +1,5 @@
+include ':andbrain-annotations'
+include ':andbrain-compiler'
+include ':andbrain-demo'
+
+rootProject.name = 'andbrain-engine'
